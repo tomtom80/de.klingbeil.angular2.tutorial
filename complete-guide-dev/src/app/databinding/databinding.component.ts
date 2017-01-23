@@ -9,10 +9,12 @@ export class DatabindingComponent implements OnInit {
 
   text = "Ein neuer String";
   newNumber = 100;
+  attacheClass = false;
 
   constructor() {
     setTimeout(() => {
       this.newNumber += 200;
+      this.attacheClass = true;
     }, 3000);
   }
 

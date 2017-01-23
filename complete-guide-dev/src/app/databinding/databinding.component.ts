@@ -21,4 +21,7 @@ export class DatabindingComponent implements OnInit {
   ngOnInit() {
   }
 
+onClick(event: Event){
+    console.log(event);
+  }
 }

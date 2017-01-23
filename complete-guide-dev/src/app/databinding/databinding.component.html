@@ -4,7 +4,6 @@
 <h4>Property Binding</h4>
 <p [innerText]="text">
 </p>
-
 <div>
   <input type="text" value="{{newNumber}}">
 </div>
@@ -12,3 +11,6 @@
   Text
 </div>
 <app-property-binding [name]="'Max'"></app-property-binding>
+<hr>
+<h4>Event Binding </h4>
+<button (click)="onClick($event)" >Click me </button>

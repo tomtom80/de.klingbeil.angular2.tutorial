@@ -15,3 +15,5 @@
 <h4>Event Binding </h4>
 <button (click)="onClick($event)" >Click me </button>
 <app-event-binding (clickedEvent)="text=$event"></app-event-binding>
+<h4> Two-Way Binding </h4>
+<input type="text" [(ngModel)]="text">

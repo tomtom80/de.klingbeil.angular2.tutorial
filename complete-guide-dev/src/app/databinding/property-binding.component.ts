@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ContentChild, ElementRef} from '@angular/core';
 
 @Component({
   selector: 'app-property-binding',
@@ -7,13 +7,21 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PropertyBindingComponent implements OnInit {
 
+  @ContentChild('caption') caption: ElementRef;
+  @ViewChild('input') input: ElementRef;
   @Input() name: string;
 
-  constructor() { }
+  constructor() {
+    setTimeout(() => {
+      this.caption.nativeElement.innerHTML = "Overridden Caption";
+      this.input.nativeElement.value = "Overridden Text";
+    }, 3000);
+
+  }
 
   ngOnInit() {
   }
 
-  
+
 
 }

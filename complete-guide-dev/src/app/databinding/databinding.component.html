@@ -10,10 +10,12 @@
 <div [ngClass]="{'red-border' : attacheClass}" [ngStyle] = "{'background-color': 'blue'}">
   Text
 </div>
-<app-property-binding [name]="'Max'"></app-property-binding>
+<app-property-binding [name]="'Max'">
+  <h4 #caption>Inline Text</h4 >
+</app-property-binding>
 <hr>
 <h4>Event Binding </h4>
 <button (click)="onClick($event)" >Click me </button>
 <app-event-binding (clickedEvent)="text=$event"></app-event-binding>
 <h4> Two-Way Binding </h4>
-<input type="text" [(ngModel)]="text">
+<input type="text"  [(ngModel)]="text">
